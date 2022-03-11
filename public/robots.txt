@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /rating/
+Disallow: /news/
+Disallow: /mass-media/
+Disallow: /votes/
+Disallow: /elections/
+Disallow: /author/
+Disallow: /party/
+Disallow: /singleNews/
+Disallow: /donation/

@@ -1,0 +1,26 @@
+@import 'src/variables.scss';
+
+.container {
+  width: 100%;
+  height: 100% !important;
+
+  @media screen and (max-width: $mobileScreen) {
+    height: 600px !important;
+  }
+}
+
+.dataGrid {
+  @media screen and (max-width: $mobileScreen) {
+    overflow-y: scroll;
+
+    width: 100%;
+    height: 600px !important;
+  }
+}
+
+.cell {
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

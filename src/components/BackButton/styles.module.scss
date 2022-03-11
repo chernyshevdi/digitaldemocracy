@@ -1,0 +1,51 @@
+@import '../../_mixins.scss';
+
+.buttonRow {
+  display: flex;
+
+  // width: 100%;
+  // margin-bottom: 20px;
+  margin-right: 2vw;
+
+  .backButton {
+    &:hover {
+      color: #363557;
+      background: transparent;
+    }
+
+    .icon {
+      height: 100%;
+      margin-right: 7px;
+
+      text-align: left;
+      letter-spacing: 0;
+
+      color: inherit;
+
+      font-family: HelveticaNeueCyr, serif;
+      font-size: 18px;
+      font-weight: 200;
+      font-style: normal;
+      line-height: 18px;
+    }
+
+    .text {
+      text-align: left;
+      letter-spacing: 0;
+
+      color: inherit;
+
+      font-family: HelveticaNeueCyr, serif;
+      font-size: 18px;
+      font-weight: 200;
+      font-style: normal;
+      line-height: 18px;
+    }
+
+    @include buttonStyle;
+
+    @media (max-width: 570px) {
+      padding: 5px 10px;
+    }
+  }
+}

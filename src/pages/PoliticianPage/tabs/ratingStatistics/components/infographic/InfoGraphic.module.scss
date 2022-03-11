@@ -1,0 +1,235 @@
+@import '/src/variables.scss';
+.root {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  min-width: 100%;
+  padding: 10px 20px;
+
+  border: 1px solid #b0b0b0;
+  border-radius: 30px;
+  margin: 10px 0px;
+
+  .notData {
+    margin: 20px;
+  }
+
+  .retingWrapper {
+    width: 75%;
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .percent {
+      color: #585858;
+      font-size: 25px;
+      font-weight: 300;
+      line-height: 21px;
+
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .mainForm {
+    width: 100%;
+    .inputLabel {
+      margin-top: 36px;
+      margin-bottom: 12px;
+
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 18px;
+      }
+    }
+
+    .checkbox {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      margin: 20px 0px 20px 0px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+      margin-top: 36px;
+
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+      }
+
+      .submitButton {
+        width: 198px;
+        height: 36px;
+        margin-right: 20px;
+        color: white !important;
+        background: #363557;
+
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+          margin-bottom: 18px;
+          margin-right: 00px;
+        }
+        &:hover {
+          color: #363557 !important;
+          background: white !important;
+          border: 1px solid #363557;
+        }
+      }
+
+      .clearButton {
+        height: 36px;
+        margin-right: 0;
+
+        color: #363557 !important;
+        border: 1px solid #363557;
+        background: white;
+
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+        }
+
+        &:hover {
+          color: white !important;
+          background: #363557 !important;
+        }
+      }
+    }
+  }
+}
+.lineChartWrapper {
+  width: 75%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
+}
+.lineChartVotersContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 580px;
+  min-width: 534px;
+
+  margin-top: 21px;
+
+  @media screen and (max-width: $mobileScreen) {
+    min-width: 100%;
+  }
+
+  .lines {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+
+    .line {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      border-radius: 30px;
+      height: 40px;
+    }
+    .count {
+      color: #000000;
+      width: 100%;
+      padding-right: 10px;
+
+      text-align: right;
+      font-family: Helvetica;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 18px;
+    }
+    span {
+      width: 100%;
+      padding-right: 10px;
+
+      text-align: right;
+      font-family: Helvetica;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 18px;
+    }
+  }
+
+  .legends {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    width: 90%;
+
+    .legend {
+      display: flex;
+
+      .legendMark {
+        width: 15px;
+        height: 21px;
+        margin-left: 5px;
+        border-radius: 40px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobileScreen) {
+    .lines {
+      height: 27px;
+
+      .line {
+        height: 27px !important;
+      }
+      .count {
+        font-size: 12px;
+        line-height: 16px;
+        @media screen and (max-width: 320px) {
+          font-size: 10px;
+        }
+      }
+    }
+
+    .legends {
+      width: 100%;
+      flex-direction: row;
+      font-size: 12px;
+      line-height: 14px;
+
+      .legend {
+        margin-top: 10px;
+        .legendMark {
+          width: 10px;
+          height: 15px;
+          margin-left: 3px;
+          border-radius: 40px;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        font-size: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,312 @@
+@import 'src/variables.scss';
+
+.hero {
+  margin-bottom: 40px;
+  padding-top: 50px;
+}
+
+.hero__description {
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 37px;
+  color: #7A7A7A;
+}
+
+.newsContainer {
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 15px 20px 15px 30px;
+
+  border-radius: 20px;
+  background-color: #e5e5e5;
+}
+
+.warningMessage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  &__title {
+    padding: 0 0.5em 0 0;
+
+    color: #7a7a7a;
+
+    font-family: 'Helvetica', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+}
+
+.newsTitle {
+  display: flex;
+  flex-direction: column;
+
+  width: 60%;
+  padding-right: 40px;
+  border-right: 1px solid #b0b0b0;
+
+  @media screen and (max-width: $laptopScreen) {
+    border-right: none;
+  }
+}
+
+.newsHeading {
+  max-width: 500px;
+  margin-bottom: 20px;
+
+  color: #222;
+
+  font-family: 'Helvetica';
+  font-size: 40px;
+  line-height: 45px;
+}
+
+.newsLinks {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.hashtags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hashtag {
+  box-sizing: border-box;
+  height: 40px;
+  margin-right: 7px;
+  margin-bottom: 7px;
+  padding: 8px 20px;
+
+  text-align: center;
+
+  border: 1px solid #b0b0b0;
+  border-radius: 30px;
+}
+
+.hashtagContain {
+  padding: 0;
+
+  color: #b0b0b0;
+
+  font-family: 'Helvetica';
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.arrows {
+  display: flex;
+  align-items: center;
+
+  margin-right: 50px;
+}
+
+.newsInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 40%;
+  min-width: 300px;
+  padding: 15px 20px 15px 40px;
+
+  color: #747373;
+}
+
+.newsAuthor {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+
+  font-size: 14px;
+}
+
+.date {
+  font-size: 14px;
+}
+
+.newsSubject {
+  display: flex;
+
+  font-size: 14px;
+}
+
+.arrowGrey {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+
+  color: #7a7a7a;
+}
+
+.arrowLink {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+
+  color: inherit;
+  border: 2px solid;
+  border-color: inherit;
+  border-radius: 50%;
+}
+
+.arrowButton {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+
+  cursor: pointer;
+
+  color: #fff;
+  border: 1px solid #363557;
+  background-color: #363557;
+
+  &:hover {
+    color: #363557;
+    background-color: white;
+  }
+}
+
+.linkButton {
+  min-width: 180px;
+  height: 40px;
+  margin-right: 20px;
+  padding: 0px 16px;
+  cursor: pointer;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #fff;
+  border: 1px solid #363557;
+  background-color: #363557;
+
+  &:hover {
+    color: #363557;
+    background-color: white;
+  }
+
+  @media (max-width: $mobileScreen) {
+    margin-top: 10px;
+    min-width: 288px;
+  }
+}
+
+.iframe {
+  width: 100%;
+  //min-width: 100%;
+  //max-height: 650px;
+  height: 70vh;
+  margin: 0 auto;
+
+  border-radius: 20px;
+  outline: none;
+}
+
+.facebook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  color: #363557;
+  background-color: transparent;
+
+  &:hover {
+    color: white;
+    border-radius: 50%;
+    background-color: #363557;
+  }
+}
+
+@media (max-width: 960px) {
+  .newsHeading {
+    max-width: 400px;
+  }
+
+  .newsInfo {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsContainer {
+    min-width: 280px;
+    max-width: 90%;
+  }
+
+  .newsTitle {
+    width: 100%;
+
+    border-right: none;
+  }
+
+  .newsHeading {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .hashtag {
+    height: 30px;
+    padding: 5px 12px;
+  }
+
+  .hashtagContain {
+    font-size: 12px;
+  }
+
+  .newsInfo {
+    min-width: unset;
+    padding: 11px 15px;
+
+    font-size: 12px;
+  }
+
+  .newsAuthor {
+    font-size: 12px;
+  }
+
+  .date {
+    font-size: 12px;
+  }
+
+  .newsSubject {
+    font-size: 12px;
+  }
+
+  .arrowGrey {
+    width: 30px;
+    height: 30px;
+  }
+
+  .arrowButton {
+    width: 35px;
+    height: 35px;
+  }
+
+  .iframe {
+    width: 90%;
+    height: 60vh;
+  }
+
+  .facebook {
+    width: 30px;
+    height: 30px;
+  }
+
+  .warningMessage {
+    flex-direction: column;
+  }
+}

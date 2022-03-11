@@ -1,0 +1,54 @@
+.list {
+  margin-bottom: 30px;
+}
+
+.heading {
+  padding: 0;
+
+  color: #7A7A7A;
+
+  font-family: 'Helvetica';
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.headingContainer {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.newsListContainer {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.buttonText {
+  cursor: pointer;
+  text-decoration: underline;
+
+  color: #363557;
+
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  .heading {
+    font-size: 16px;
+  }
+
+  .headingContainer {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .newsListContainerContainer {
+    margin-bottom: 50px;
+  }
+
+  .buttonText {
+    margin-bottom: 12px;
+  }
+}

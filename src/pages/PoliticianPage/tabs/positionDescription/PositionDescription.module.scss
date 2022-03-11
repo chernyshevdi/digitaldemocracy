@@ -1,0 +1,81 @@
+.root {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 277px;
+  padding: 11px;
+
+  color: #222;
+  border: 1px solid #B0B0B0;
+  border-radius: 20px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+
+  h4 {
+    font-size: 30px;
+    font-weight: 400;
+
+    @media screen and (max-width: 1024px) {
+      text-align: center;
+    }
+  }
+
+  p {
+    @media screen and (max-width: 1024px) {
+      text-align: center;
+    }
+  }
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  p {
+    margin-right: 10px;
+  }
+}
+
+.linkButton {
+  position: relative;
+
+  max-height: 36px;
+}
+
+.arrowLink {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+
+  color: inherit;
+  border: 2px solid;
+  border-color: inherit;
+  border-radius: 50%;
+}
+
+.arrowButton {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+
+  cursor: pointer;
+
+  color: #FFF;
+  border: 1px solid #363557;
+  background-color: #363557;
+
+  &:hover {
+    color: #363557;
+    background-color: #FFF;
+  }
+}

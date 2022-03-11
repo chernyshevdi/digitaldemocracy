@@ -1,0 +1,58 @@
+@-webkit-keyframes fade {
+  0% {
+    visibility: hidden;
+  }
+
+  20% {
+    visibility: visible;
+  }
+
+  33% {
+    visibility: visible;
+  }
+
+  53% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes fade {
+  0% {
+    visibility: hidden;
+  }
+
+  20% {
+    visibility: visible;
+  }
+
+  33% {
+    visibility: visible;
+  }
+
+  53% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: hidden;
+  }
+}
+
+.delayForOne {
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+.delayForTwo {
+  -webkit-animation-delay: -3s;
+  animation-delay: -3s;
+}
+
+.delayForThree {
+  -webkit-animation-delay: -4s;
+  animation-delay: -4s;
+}

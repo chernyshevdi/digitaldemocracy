@@ -1,0 +1,39 @@
+// .container {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   min-height: 80vh;
+
+//   span {
+//     text-align: center;
+
+//     font-size: 24px;
+//   }
+// }
+
+.donation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 75vh;
+
+  .container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+    span {
+        width: 300px;
+        padding-top: 15px;
+
+        text-align: center;
+
+        color: #747373;
+
+        font-size: 20px;
+    }
+  }
+}

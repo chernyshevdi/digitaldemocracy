@@ -1,0 +1,55 @@
+.statistics {
+  margin-bottom: 35px;
+  padding-bottom: 50px;
+}
+
+.statisticsContainer {
+  width: 100%;
+
+  border-bottom: 1px solid #B0B0B0;
+}
+
+.politicians {
+  padding-right: 100px;
+}
+
+.headings {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.heading {
+  padding: 0;
+
+  color: #7A7A7A;
+
+  font-family: 'Helvetica';
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+@media (max-width: 960px) {
+  .politicians {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .statistics {
+    margin-bottom: 25px;
+    padding-bottom: 30px;
+  }
+
+  .headings {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+
+  .heading {
+    font-size: 18px;
+  }
+}

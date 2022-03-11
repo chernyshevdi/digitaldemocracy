@@ -1,0 +1,1274 @@
+@import '../../variables.scss';
+
+.cont {
+  padding: 0 !important;
+}
+
+.container {
+  min-height: 80vh;
+
+  .backButton {
+    display: flex;
+    align-items: center;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    cursor: pointer;
+
+    .arrow {
+      transform: rotate(180deg);
+    }
+
+    p {
+      margin: 0 !important;
+      padding-bottom: 0 !important;
+      padding-left: 10px;
+    }
+  }
+
+  .chartContainer {
+    border: 1px solid #B0B0B0;
+    border-radius: 5px;
+
+    .chartWrapper {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      padding: 10px;
+
+      .chart {
+        position: relative;
+        width: calc(100% - 20px);
+        * {
+          transition: 0.3s all;
+        }
+      }
+    }
+
+    .pickersContainer {
+      display: flex;
+      align-items: center;
+
+      padding: 10px;
+
+      border-bottom: 1px solid #B0B0B0;
+
+      .picker {
+        display: flex;
+        align-items: center;
+
+        &.disabled {
+          opacity: 0.5;
+        }
+
+        &.error {
+          input {
+            transition: 0.3s all !important;
+
+            color: red !important;
+            border-bottom-color: red !important;
+          }
+        }
+
+        span {
+          color: #444;
+        }
+      }
+    }
+
+    @media screen and (max-width: $mobileScreen) {
+      .chartWrapper {
+        padding: 0 !important;
+      }
+
+      .pickersContainer {
+        flex-direction: column;
+
+        span {
+          font-size: 12px;
+        }
+
+        button {
+          margin-top: 1rem;
+        }
+
+        .picker {
+          flex-direction: column;
+
+          button {
+            margin-top: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.newsContainer {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  .sortRow {
+    display: flex;
+    overflow-x: hidden;
+
+    width: max-content;
+    width: 100%;
+    margin-bottom: 30px;
+
+    .sortBadge {
+      display: flex;
+      align-items: center;
+
+      margin: 0;
+      margin-right: 15px;
+      padding: 5px 20px;
+
+      border-color: #B0B0B0;
+
+      .icon {
+        height: 100%;
+
+        text-align: left;
+        letter-spacing: 0;
+
+        color: #7A7A7A;
+
+        font-family: HelveticaNeueCyr;
+        font-size: 18px;
+        font-weight: 200;
+        font-style: normal;
+        line-height: 18px;
+      }
+
+      .text {
+        margin-right: 10px;
+
+        text-align: left;
+        letter-spacing: 0;
+
+        color: #7A7A7A;
+
+        font-family: HelveticaNeueCyr;
+        font-size: 18px;
+        font-weight: 200;
+        font-style: normal;
+        line-height: 18px;
+      }
+
+      .emptyIcon {
+        display: flex;
+
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    .sortBadge-active {
+      display: flex;
+      align-items: center;
+
+      margin: 0;
+      margin-right: 15px;
+      padding: 5px 20px;
+
+      border-color: #B0B0B0;
+      background-color: #363557;
+
+      .icon {
+        height: 100%;
+
+        text-align: left;
+        letter-spacing: 0;
+
+        color: #FFF;
+
+        font-family: HelveticaNeueCyr;
+        font-size: 18px;
+        font-weight: 200;
+        font-style: normal;
+        line-height: 18px;
+      }
+
+      .text {
+        margin-right: 10px;
+
+        text-align: left;
+        letter-spacing: 0;
+
+        color: #FFF;
+
+        font-family: HelveticaNeueCyr;
+        font-size: 18px;
+        font-weight: 200;
+        font-style: normal;
+        line-height: 18px;
+      }
+
+      .emptyIcon {
+        display: flex;
+
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    @media screen and (max-width: $mobileScreen) {
+      overflow-x: scroll;
+
+      padding: 10px 0;
+
+      .sortBadge {
+        min-width: max-content;
+        padding: 5px 10px;
+
+        .text {
+          margin-right: 5px;
+
+          font-size: 14px;
+        }
+      }
+
+      .sortBadge-active {
+        min-width: max-content;
+        padding: 5px 10px;
+
+        .text {
+          margin-right: 5px;
+
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .news {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    .outerCardContainer {
+      width: 266px;
+      margin: 0 16px 16px 0;
+    }
+
+    @media screen and (max-width: $mobileScreen) {
+      justify-content: center;
+    }
+  }
+}
+
+.noNewsBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  span {
+    padding: 10px 0;
+    padding-left: 10px;
+
+    color: #747373;
+
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: $mobileScreen) {
+    span {
+      font-size: 12px;
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-shrink: 1;
+
+  margin: 20px 10px;
+
+  .tabList {
+    flex-basis: 24%;
+    scrollbar-width: none;
+
+    .link {
+      display: flex;
+      align-items: center;
+
+      height: 40px;
+      padding: 5px 10px;
+
+      transition: 0.3s all;
+      text-decoration: none;
+
+      color: #747373;
+      border-bottom: 1px solid #B0B0B0;
+
+      &:hover {
+        background-color: #36355720;
+      }
+
+      &.-active {
+        color: white;
+        background-color: #363557;
+      }
+    }
+  }
+
+  .tabContent {
+    flex-basis: 76%;
+
+    min-height: 600px;
+    margin-left: 30px;
+
+    @media screen and (max-width: $mobileScreen) {
+      margin-left: 0 !important;
+    }
+  }
+
+  @media screen and (max-width: $mobileScreen) {
+    flex-direction: column;
+
+    .tabListContainer {
+      position: relative;
+
+      display: flex;
+      overflow-x: scroll;
+      align-items: center;
+      flex-direction: row;
+
+      width: 100%;
+      margin-bottom: 16px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .prevArrow {
+        margin-right: 10px;
+        padding: 10px;
+
+        cursor: pointer;
+        transform: rotate(180deg);
+
+        border-radius: 100%;
+        background-color: #F3F3F3;
+
+        font-size: 10px;
+      }
+
+      .nextArrow {
+        margin-left: 10px;
+        padding: 10px;
+
+        cursor: pointer;
+
+        border-radius: 100%;
+        background-color: #F3F3F3;
+
+        font-size: 10px;
+      }
+
+      .tabContent {
+        flex-basis: 100%;
+
+        width: 100%;
+      }
+
+      .tabList {
+        position: relative;
+
+        display: flex;
+        overflow-x: scroll;
+        flex-basis: 100%;
+        flex-direction: row;
+
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .link {
+          position: relative;
+
+          justify-content: center;
+
+          box-sizing: border-box;
+          min-width: calc(50% - 10px);
+          margin-right: 10px;
+
+          text-align: center;
+
+          border: 1px solid #B0B0B0;
+          border-radius: 30px;
+
+          font-size: 70%;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+}
+
+.profileInfoContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #B0B0B0;
+
+  .buttonRow {
+    display: flex;
+
+    width: 100%;
+    margin-bottom: 20px;
+
+    .backButton {
+      margin: 0;
+      padding: 5px 20px;
+
+      border-color: #B0B0B0;
+
+      .icon {
+        height: 100%;
+        margin-right: 7px;
+
+        text-align: left;
+        letter-spacing: 0;
+
+        color: #7A7A7A;
+
+        font-family: HelveticaNeueCyr;
+        font-size: 18px;
+        font-weight: 200;
+        font-style: normal;
+        line-height: 18px;
+      }
+
+      .text {
+        text-align: left;
+        letter-spacing: 0;
+
+        color: #7A7A7A;
+
+        font-family: HelveticaNeueCyr;
+        font-size: 18px;
+        font-weight: 200;
+        font-style: normal;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+.profileInfoContainer-mobile {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  .buttonRow {
+    display: flex;
+
+    width: 100%;
+    margin-bottom: 20px;
+
+    .backButton {
+      margin: 0 !important;
+      padding: 5px 20px;
+
+      border-color: #B0B0B0;
+
+      .icon {
+        height: 100%;
+        margin-right: 7px;
+
+        text-align: left;
+        letter-spacing: 0;
+
+        color: #7A7A7A;
+
+        font-family: HelveticaNeueCyr;
+        font-size: 18px;
+        font-weight: 200;
+        font-style: normal;
+        line-height: 18px;
+      }
+
+      .text {
+        text-align: left;
+        letter-spacing: 0;
+
+        color: #7A7A7A;
+
+        font-family: HelveticaNeueCyr;
+        font-size: 18px;
+        font-weight: 200;
+        font-style: normal;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .topItems {
+    display: flex;
+
+    height: 100%;
+
+    .avatarBlock {
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 117px;
+      min-width: 117px;
+      height: 117px;
+      min-height: 117px;
+
+      border-radius: 20px;
+      background-color: #248232;
+
+      .avatar {
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 100%;
+
+        border-radius: 100%;
+        background-color: #FFF;
+
+        &.noAvatar {
+          background-color: #E5E5E5;
+        }
+
+        .noAvatarIcon {
+          width: 100px;
+          height: 100px;
+        }
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+
+    .personBlock {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      width: 100%;
+      height: 100%;
+      margin-left: 5px;
+
+      .cardsBlock {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        box-sizing: border-box;
+        height: 61px;
+
+        .card {
+          display: flex;
+          overflow: hidden;
+          justify-content: space-between;
+
+          box-sizing: border-box;
+          width: 100%;
+          height: 100%;
+          padding: 10px 20px;
+
+          border: 1px solid #B0B0B0;
+          border-radius: 20px;
+
+          .description {
+            overflow-y: scroll;
+
+            width: 100%;
+            height: 90%;
+
+            .text {
+              max-height: 100%;
+
+              text-overflow: ellipsis;
+
+              color: #585858;
+
+              font-size: 8px;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+
+      .fioBlock {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin-bottom: 5px;
+
+        .fio {
+          p {
+            margin: 0 !important;
+
+            color: #222;
+
+            font-size: 24px;
+          }
+        }
+
+        .subscribers {
+          display: flex;
+          align-items: center;
+
+          height: 18px;
+
+          .facebook {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 40px;
+            height: 40px;
+
+            cursor: pointer;
+
+            color: #363557;
+            background-color: transparent;
+
+            &:hover {
+              color: white;
+              border-radius: 50%;
+              background-color: #363557;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .subscriberButton-mobile {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px !important;
+
+    color: #222;
+    border: 1px solid #B0B0B0;
+    background-color: #EDEDED !important;
+
+    font-size: 14px;
+  }
+
+  .card {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 122px;
+    margin-top: 5px;
+    padding: 10px 20px;
+
+    border: 1px solid #B0B0B0;
+    border-radius: 20px;
+
+    .secondCard {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      width: 100%;
+
+      .trustRow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        height: 45%;
+
+        .badge {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          box-sizing: border-box;
+          max-width: 55%;
+          height: 100%;
+          padding: 20px 15px;
+
+          border-radius: 150px;
+          background: #EDEDED;
+        }
+
+        .percent {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          max-width: 40%;
+          height: 100%;
+
+          color: #585858;
+
+          font-size: 36px;
+
+          @media screen and (max-width: $mobileScreen) {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.loaderWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.topItems {
+  display: flex;
+
+  width: 100%;
+  height: 295px;
+  margin-bottom: 60px;
+
+  .avatarBlock {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 298px;
+    min-width: 298px;
+    // background-color: #248232;
+    height: 100%;
+    min-height: 100%;
+
+    border-radius: 20px;
+
+    &__nonRaiting {
+      border: 1px solid #000;
+    }
+
+    .avatar {
+      display: flex;
+      overflow: hidden;
+      align-items: center;
+      justify-content: center;
+
+      width: 93%;
+      height: 93%;
+
+      border-radius: 5%;
+      background-color: #FFF;
+
+      &__nonRaiting {
+        border: 1px solid #000;
+      }
+
+      &.noAvatar {
+        background-color: #E5E5E5;
+      }
+
+      .noAvatarIcon {
+        width: 100px;
+        height: 100px;
+      }
+
+      img {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .changeProfileButton {
+      width: 200px;
+      margin-top: 20px;
+      padding: 2px 0 !important;
+
+      color: #B0B0B0;
+      border: 1px solid #B0B0B0;
+    }
+  }
+
+  .personBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+    margin-left: 30px;
+
+    .description {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      max-width: 100%;
+
+      color: #585858;
+
+      font-size: 18px;
+      line-height: 21px;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .cardsBlock {
+      display: flex;
+      // align-items: center;
+      justify-content: space-between;
+      // height: 155px;
+      // box-sizing: border-box;
+      // justify-self: end;
+      .card {
+        display: flex;
+        // height: 100%;
+        overflow: hidden;
+        justify-content: space-between;
+
+        box-sizing: border-box;
+        width: 577px;
+        height: 102px;
+
+        &__nonRaiting {
+          height: auto;
+        }
+        // .description {
+        //   height: 90%;
+        //   overflow-y: scroll;
+        //   width: 100%;
+        //   @media screen and (max-width: $preMobileScreen) {
+        //     height: 100%;
+        //   }
+        //   .text {
+        //     color: #585858;
+        //     font-size: 18px;
+        //     font-weight: 300;
+        //     text-overflow: ellipsis;
+        //     max-height: 100%;
+        //     @media screen and (max-width: $preMobileScreen) {
+        //       font-size: 14px;
+        //     }
+        //   }
+        // }
+        .secondCard {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          width: 100%;
+
+          .trustRow {
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+            justify-content: flex-end;
+
+            width: 100%;
+            height: 50px;
+
+            &__nonRaiting {
+              justify-content: flex-start;
+            }
+
+            .badge {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              box-sizing: border-box;
+              width: 192px;
+              height: 100%;
+              padding: 20px 15px;
+
+              border-radius: 48px;
+              background: #EDEDED;
+
+              &__nonRaiting {
+                width: auto;
+
+                background-color: #C4C4C4;
+              }
+
+              @media screen and (max-width: $preMobileScreen) {
+                height: 70%;
+              }
+
+              .text {
+                display: flex;
+                overflow: hidden;
+                align-items: center;
+                justify-content: center;
+
+                white-space: nowrap;
+
+                font-size: 16px;
+                line-height: 42px;
+
+                @media screen and (max-width: $preMobileScreen) {
+                  font-size: 12px;
+                }
+              }
+            }
+
+            .percent {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              max-width: 40%;
+              height: 100%;
+
+              color: #585858;
+
+              font-size: 36px;
+
+              @media screen and (max-width: $preMobileScreen) {
+                font-size: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .fioBlock {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: row;
+      justify-content: space-between;
+
+      margin-bottom: 16px;
+
+      .fio {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+
+        p {
+          margin: 0 !important;
+
+          color: #222;
+
+          font-size: 48px;
+          line-height: 56px;
+
+          @media screen and (max-width: $mobileScreen) {
+            font-size: 24px;
+            line-height: 32px;
+          }
+        }
+      }
+
+      .subscribers {
+        display: flex;
+        align-items: center;
+
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .subscriberButton {
+    width: 207px;
+    height: 40px;
+
+    color: white;
+    border-radius: 21px !important;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.bottomRight {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  color: #7A7A7A;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.subscribersBadge {
+  min-width: 207px;
+
+  text-align: end;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.facebook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  color: #363557;
+  background-color: transparent;
+
+  &:hover {
+    color: white;
+    border-radius: 50%;
+    background-color: #363557;
+  }
+}
+
+.mobileRoot {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 100%;
+  margin-bottom: 20px;
+
+  p {
+    width: 100%;
+    margin: 0;
+
+    color: #222;
+
+    font-size: 20px;
+  }
+
+  .mobSubscribers {
+    margin-top: 8px;
+    margin-bottom: 12px;
+
+    color: #7A7A7A;
+
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 13px;
+  }
+
+  .mobInfoBlock {
+    display: flex;
+
+    .mobAvatarBlock {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 105px;
+      height: 110px;
+      margin-right: 10px;
+
+      border-radius: 10px;
+
+      &__nonRaiting {
+        border: 1px solid #000;
+      }
+
+      .mobAvatar {
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+
+        width: 93%;
+        height: 93%;
+
+        border-radius: 5%;
+        background-color: #FFF;
+
+        &__nonRaiting {
+          border: 1px solid #000;
+        }
+
+        &.mobNoAvatar {
+          background-color: #E5E5E5;
+        }
+
+        .mobNoAvatarIcon {
+          width: 99px;
+          height: 104px;
+        }
+
+        img {
+          min-width: 100%;
+          min-height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  .mobRightBlock {
+    display: flex;
+    flex-direction: column;
+
+    color: #7A7A7A;
+
+    font-size: 11px;
+    line-height: 13px;
+
+    p {
+      margin: 0;
+
+      color: #7A7A7A;
+
+      font-size: 11px;
+      line-height: 13px;
+    }
+
+    .mobEnglishName {
+      margin-bottom: 8px;
+    }
+
+    .mobAge {
+      margin-bottom: 8px;
+    }
+
+    .mobTitle {
+      width: max-content;
+      margin-bottom: 8px;
+
+      cursor: pointer;
+
+      color: #363557;
+      text-decoration-line: underline;
+    }
+  }
+}
+
+.mobCard {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 64px;
+  margin-top: 12px;
+
+  .mobSecondCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+
+    .mobTrustRow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 100%;
+      height: 45%;
+
+      .mobBadge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 112px;
+        height: 29px;
+
+        color: #34A853;
+        border-radius: 150px;
+        background: #D4F5DD;
+
+        &__nonRaiting {
+          width: auto;
+          padding: 5px;
+
+          background-color: #C4C4C4;
+        }
+
+        .mobText {
+          font-size: 11px;
+          line-height: 21px;
+        }
+      }
+
+      .mobPercent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        max-width: 40%;
+        height: 100%;
+
+        color: #585858;
+
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+  }
+}
+
+.mobSubscriberButton {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.MobBottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .mobChangeButton {
+    width: 75%;
+    height: 40px;
+
+    border: 1px solid #363557;
+    border-radius: 40px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+  }
+}

@@ -1,0 +1,62 @@
+@import 'src/variables.scss';
+
+.container {
+  position: relative;
+
+  width: 100%;
+  // min-height: 42px;
+  min-width: 534px;
+  height: 40px;
+
+  @media screen and (max-width: $mobileScreen) {
+    min-width: 100%;
+    height: 27px;
+  }
+
+  .line {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    height: 100%;
+
+    border-radius: 30px;
+
+    @media screen and (max-width: $mobileScreen) {
+      height: 27px;
+    }
+
+    span {
+      width: 100%;
+      padding-right: 20px;
+
+      text-align: right;
+
+      color: rgba(255, 255, 255, 1);
+
+      font-size: 14px;
+      font-weight: 300;
+
+      @media screen and (max-width: preMobileScreen) {
+        padding-right: 10px;
+
+        font-size: 10px;
+      }
+    }
+
+    .tooltip {
+      // padding-right: 20px;
+      cursor: pointer;
+
+      color: #FFF;
+
+      @media screen and (max-width: preMobileScreen) {
+        padding-right: 10px;
+
+        font-size: 10px;
+      }
+    }
+  }
+}

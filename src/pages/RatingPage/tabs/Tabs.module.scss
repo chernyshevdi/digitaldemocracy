@@ -1,0 +1,214 @@
+@import '../../../variables.scss';
+
+.newsContainer {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  .sortRow {
+    display: flex;
+    overflow-x: hidden;
+    width: max-content;
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    @media screen and (max-width: $mobileScreen) {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .sortBadge {
+      display: flex;
+      align-items: center;
+
+      margin: 0;
+
+      margin-right: 15px;
+      padding: 5px 20px;
+
+      border-color: #b0b0b0;
+
+      .icon {
+        height: 100%;
+
+        text-align: left;
+        letter-spacing: 0;
+
+        color: #7a7a7a;
+
+        font-family: HelveticaNeueCyr;
+        font-size: 18px;
+        font-weight: 200;
+        font-style: normal;
+        line-height: 18px;
+      }
+
+      .text {
+        margin-right: 10px;
+
+        text-align: left;
+        letter-spacing: 0;
+
+        color: #7a7a7a;
+
+        font-family: HelveticaNeueCyr;
+        font-size: 18px;
+        font-weight: 200;
+        font-style: normal;
+        line-height: 18px;
+      }
+
+      .emptyIcon {
+        display: flex;
+
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    .sortBadge-active {
+      display: flex;
+      align-items: center;
+
+      margin: 0;
+      margin-right: 15px;
+      padding: 5px 20px;
+
+      border-color: #b0b0b0;
+      background-color: #363557;
+
+      .icon {
+        height: 100%;
+
+        text-align: left;
+        letter-spacing: 0;
+
+        color: #fff;
+
+        font-family: HelveticaNeueCyr;
+        font-size: 18px;
+        font-weight: 200;
+        font-style: normal;
+        line-height: 18px;
+      }
+
+      .text {
+        margin-right: 10px;
+
+        text-align: left;
+        letter-spacing: 0;
+
+        color: #fff;
+
+        font-family: HelveticaNeueCyr;
+        font-size: 18px;
+        font-weight: 200;
+        font-style: normal;
+        line-height: 18px;
+      }
+
+      .emptyIcon {
+        display: flex;
+
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    @media screen and (max-width: $mobileScreen) {
+      .sortBadge {
+        margin-top: 22px;
+        .text {
+          font-size: 14px;
+        }
+      }
+
+      .sortBadge-active {
+        margin-top: 22px;
+        .text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: 100%;
+    margin-bottom: 40px;
+    // .outerCardContainer {
+    //   width: 324px;
+    //   // margin: 0px 16px 16px 0px;
+    // }
+    @media screen and (max-width: $mobileScreen) {
+      justify-content: center;
+    }
+  }
+
+  .buttonForTitle {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: black;
+    text-align: left;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    @media screen and (max-width: 320px) {
+      width: 256px;
+    }
+  }
+  .mainTitle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 14px 0 14px 0;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+
+    .worldCheckbox {
+      display: flex;
+      align-items: center;
+      margin-top: 19px;
+    }
+  }
+  .sortDrop {
+    display: flex;
+    flex-direction: column;
+
+    .mainForm {
+      display: flex;
+      flex-direction: row;
+
+      @media screen and (max-width: $mobileScreen) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .containerBtn {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 32px;
+
+    .btnShowMore {
+      cursor: pointer;
+      text-decoration: underline;
+
+      color: #363557;
+
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.slick-prev {
+  top: 50% !important;
+  left: -40px !important;
+}
+
+.slick-next {
+  top: 50% !important;
+  right: 0 !important;
+}
+
+.slick-prev::before {
+  display: flex;
+  align-items: center;
+
+  width: 20px;
+  height: 20px;
+
+  content: url("../../../icons/pictures/prev.png") !important;
+}
+
+.slick-next::before {
+  display: flex;
+  align-items: center;
+
+  width: 20px;
+  height: 20px;
+
+  content: url("../../../icons/pictures/next.png") !important;
+}
+
+.slick-track {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.slick-slide,
+.slick-active {
+  /* margin-right: 20px; */
+
+  /* min-width: 210px !important; */
+  text-align: center;
+}

@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 45%;
+}
+
+.google {
+  padding: 0 !important;
+
+  text-align: left;
+
+  color: black !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  font-family: BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" !important;
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+}
+
+.error {
+  position: relative;
+
+  margin-top: 10px;
+
+  color: red;
+
+  font-size: 14px;
+}

@@ -1,0 +1,77 @@
+.statistics {
+  margin-bottom: 35px;
+  padding-bottom: 50px;
+}
+
+.statisticsContainer {
+  width: 100%;
+
+  border-bottom: 1px solid #b0b0b0;
+}
+
+.wrapperPoliticians {
+  // padding-right: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.wrapperBills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.headings {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.heading {
+  padding: 0;
+
+  color: #7a7a7a;
+
+  font-family: 'Helvetica';
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+@media (max-width: 960px) {
+  .politicians {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .statistics {
+    margin-bottom: 25px;
+    padding-bottom: 30px;
+  }
+
+  .headings {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+
+  .heading {
+    font-size: 18px;
+  }
+}
+
+.showMoreButton {
+  margin-left: 10px;
+
+  transition: transform 0.1s linear;
+  transform: rotate(0deg);
+}
+
+.showMoreButtonOpen {
+  margin-left: 10px;
+
+  transition: transform 0.1s linear;
+  transform: rotate(180deg);
+}

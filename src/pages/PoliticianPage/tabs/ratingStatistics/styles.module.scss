@@ -1,0 +1,182 @@
+.metricsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .metric {
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+
+    width: 25%;
+    min-height: 130px;
+    padding: 20px 30px;
+
+    border-radius: 20px;
+
+    .icon {
+      flex-basis: 35%;
+
+      max-height: 140px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        max-height: 140px;
+      }
+    }
+
+    .text {
+      display: flex;
+      flex-basis: 65%;
+      flex-direction: column;
+
+      margin-left: 15px;
+
+      color: white;
+
+      .percent {
+        padding-bottom: 5px;
+
+        font-size: 18px;
+      }
+
+      .desc {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 570px) {
+    flex-direction: column;
+
+    margin-left: 0;
+
+    .metric {
+      width: 100%;
+      margin-bottom: 20px;
+
+      .icon {
+        flex-basis: 25%;
+      }
+
+      .text {
+        flex-basis: 75%;
+      }
+    }
+  }
+}
+
+.diagramContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin-top: 40px;
+
+  cursor: default;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding: 10px 20px;
+
+    border: 1px solid #b0b0b0;
+    border-radius: 30px;
+  }
+
+  @media screen and (max-width: 570px) {
+    .wrapper {
+      width: 100%;
+    }
+  }
+}
+
+.chart {
+  transition: 0.3s all !important;
+
+  * {
+    transition: 0.3s all !important;
+  }
+}
+
+// .lineChartVotersContainer {
+//   position: relative;
+
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+//   justify-content: center;
+
+//   width: 100%;
+//   margin-top: 40px;
+
+//   .lines {
+//     position: relative;
+
+//     width: 100%;
+//     height: 50px;
+
+//     .line {
+//       position: absolute;
+
+//       height: 30px;
+
+//       border-radius: 5px;
+//     }
+//   }
+
+//   .legends {
+//     position: relative;
+
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-around;
+
+//     width: 750px;
+
+//     .legend {
+//       display: flex;
+//       align-items: center;
+
+//       .count {
+//         color: #747373;
+
+//         font-size: 12px;
+//       }
+
+//       .legendMark {
+//         width: 15px;
+//         height: 21px;
+
+//         border-radius: 40px;
+//       }
+
+//       span {
+//         padding-left: 5px;
+
+//         font-size: 14px;
+//       }
+//     }
+//   }
+
+//   @media screen and (max-width: 570px) {
+//     .lines {
+//       width: 90%;
+//     }
+
+//     .legends {
+//       flex-direction: column;
+
+//       width: auto !important;
+
+//       .legend {
+//         margin-top: 10px;
+//       }
+//     }
+//   }
+// }

@@ -1,0 +1,38 @@
+.container {
+  overflow: hidden !important;
+
+  width: 100%;
+
+  &.mobileContainer {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .btn {
+    width: 400px;
+    padding: 30px !important;
+    padding-top: 3em;
+    padding-bottom: 3em;
+
+    transition: ease-in-out 0.25s;
+    transition-property: background-color, color;
+
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none !important;
+
+    color: #222;
+    border: 1px solid #B0B0B0;
+    border-radius: 100px;
+
+    font-size: 20px;
+
+    &:hover {
+      color: #FFF;
+      background-color: #363557;
+    }
+  }
+}

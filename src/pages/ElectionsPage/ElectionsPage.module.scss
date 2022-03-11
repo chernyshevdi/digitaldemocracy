@@ -1,0 +1,130 @@
+@import '../../variables.scss';
+
+.container {
+  min-height: 80vh;
+
+  .backButton {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+    .arrow {
+      transform: rotate(180deg);
+    }
+
+    p {
+      margin: 0 !important;
+      padding-bottom: 0 !important;
+      padding-left: 10px;
+    }
+  }
+}
+
+.votingResult {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.h2 {
+  padding-left: 24px;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.newsTop {
+  margin-top: 75px;
+}
+
+.statistic {
+  display: flex;
+  flex-direction: column;
+
+  .item {
+    display: flex;
+    justify-content: center;
+    padding: 20px 1px;
+    margin: 20px;
+    font-weight: 900;
+    font-size: 24px;
+    color: #248232;
+    border-bottom: 4px solid rgb(36, 130, 50, 0.2);
+  }
+  .item_span {
+    display: flex;
+    font-weight: 400;
+    font-size: 24px;
+    color: #248232;
+  }
+  b {
+    padding: 0 10px;
+  }
+}
+
+.statisticMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .item {
+    padding: 20px 1px;
+    margin: 20px;
+    font-weight: 400;
+    font-size: 24px;
+    color: #248232;
+    border-bottom: 4px solid rgb(36, 130, 50, 0.2);
+  }
+  .item_span {
+    padding: 0 10px 0 0;
+  }
+  b {
+    padding: 0 10px 0 0;
+  }
+}
+
+.statisticVotin {
+  display: flex;
+  flex-direction: row;
+
+  .item {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 20px 1px;
+    margin: 20px;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 150%;
+    color: #248232;
+    border-bottom: 4px solid rgb(36, 130, 50, 0.2);
+  }
+  .item_span {
+    display: flex;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 150%;
+    color: #248232;
+  }
+  b {
+    padding: 0 10px;
+  }
+}
+
+.statisticVotinMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .item {
+    padding: 20px 1px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 24px;
+    color: #248232;
+  }
+  .item_span {
+    padding: 0 10px 0 0;
+  }
+  b {
+    padding: 0 10px 0 0;
+  }
+}

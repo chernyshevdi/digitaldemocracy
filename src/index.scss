@@ -1,0 +1,146 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  margin: 0;
+
+  @media screen and (max-width: 570px) {
+    overflow-x: hidden;
+  }
+}
+
+.PrivateSwitchBase-root {
+  color: #363557 !important;
+}
+
+.MuiButton-root {
+  font-weight: 400;
+}
+
+.MuiBox-root {
+  outline: none !important;
+}
+
+.MuiTypography-root {
+  padding-bottom: 0;
+}
+
+.MuiInputBase-root {
+  padding-right: 0 !important;
+}
+
+.MuiInputAdornment-root {
+  margin-left: 0 !important;
+}
+
+.MuiButton-outlinedPrimary {
+  &:hover {
+    color: #363557;
+  }
+}
+
+.css-1od52cu-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 10px !important;
+}
+
+.MuiButton-containedPrimary {
+  color: #FFF;
+  background-color: #363557;
+
+  &:disabled {
+    color: white;
+    background-color: #B0B0B0;
+  }
+
+  &.-disabled {
+    cursor: default;
+
+    color: white !important;
+    border-color: #B0B0B0 !important;
+    background-color: #B0B0B0 !important;
+    box-shadow: none !important;
+
+    .MuiTouchRipple-root {
+      display: none !important;
+    }
+
+    &:hover {
+      outline: none !important;
+    }
+  }
+}
+
+.MuiButton-outlinedSecondary {
+  color: rgba(245, 0, 87) !important;
+  border: 1px solid rgba(245, 0, 87, 0.5);
+  background-color: white;
+
+  &:disabled {
+    color: white;
+    background-color: #B0B0B0;
+  }
+
+  &.-disabled {
+    cursor: default;
+
+    color: white !important;
+    border-color: #B0B0B0 !important;
+    background-color: #B0B0B0 !important;
+    box-shadow: none !important;
+
+    .MuiTouchRipple-root {
+      display: none !important;
+    }
+
+    &:hover {
+      outline: none !important;
+    }
+  }
+}
+
+.MuiListItem-root {
+  padding: 0;
+}
+
+.MuiSwitch-colorPrimary {
+  color: #248232 !important;
+}
+
+.MuiSwitch-track {
+  background-color: #A2FFC7 !important;
+}
+
+muibuttonbase-root-muiiconbutton-root-muiswitch-switchbase.Mui-checked + .MuiSwitch-track {
+  background-color: #36CD67 !important;
+}
+
+.Mui-checked + .MuiSwitch-track {
+  background-color: #24C853 !important;
+}
+
+.MuiButton-outlinedPrimary {
+  color: #747373;
+  border-color: #747373;
+
+  &:hover {
+    color: #363557;
+    border-color: #363557;
+  }
+}
+
+.MuiDataGrid-footer {
+  display: none !important;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}

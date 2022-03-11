@@ -1,0 +1,328 @@
+.container {
+  color: #747373;
+}
+
+.navigation {
+  display: flex;
+  flex-shrink: 1;
+
+  margin: 50px 0;
+  padding-top: 20px;
+
+  border-top: 1px solid #B0B0B0;
+
+  .tabList {
+    flex-basis: 24%;
+    scrollbar-width: none;
+
+    .link {
+      display: flex;
+      align-items: center;
+
+      height: 40px;
+      padding: 5px 10px;
+
+      transition: 0.3s all;
+      text-decoration: none;
+
+      color: #747373;
+      border-bottom: 1px solid #B0B0B0;
+
+      &:hover {
+        background-color: #36355720;
+      }
+
+      &.-active {
+        color: white;
+        background-color: #363557;
+      }
+
+      &.withOutBorder {
+        border-bottom: none !important;
+      }
+    }
+  }
+
+  .tabContent {
+    flex-basis: 76%;
+
+    margin-left: 30px;
+
+    @media screen and (max-width: 570px) {
+      align-items: center;
+
+      margin-left: 0 !important;
+    }
+  }
+
+  @media screen and (max-width: 570px) {
+    flex-direction: column;
+
+    .tabListContainer {
+      position: relative;
+
+      display: flex;
+      overflow-x: scroll;
+      align-items: center;
+      flex-direction: row;
+
+      width: 100%;
+      margin-bottom: 16px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .prevArrow {
+        margin-right: 10px;
+        padding: 10px;
+
+        cursor: pointer;
+        transform: rotate(180deg);
+
+        border-radius: 100%;
+        background-color: #F3F3F3;
+
+        font-size: 10px;
+      }
+
+      .nextArrow {
+        margin-left: 10px;
+        padding: 10px;
+
+        cursor: pointer;
+
+        border-radius: 100%;
+        background-color: #F3F3F3;
+
+        font-size: 10px;
+      }
+
+      .tabContent {
+        flex-basis: 100%;
+
+        width: 100%;
+      }
+
+      .tabList {
+        position: relative;
+
+        display: flex;
+        overflow-x: scroll;
+        flex-basis: 100%;
+        flex-direction: row;
+        scroll-behavior: smooth;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .link {
+          position: relative;
+
+          justify-content: center;
+
+          min-width: calc(50% - 10px);
+          height: auto;
+          margin-right: 10px;
+
+          text-align: center;
+
+          border: 1px solid #B0B0B0;
+          border-radius: 30px;
+
+          font-size: 70%;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  cursor: pointer;
+
+  .arrow {
+    transform: rotate(180deg);
+  }
+
+  p {
+    margin: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 10px;
+  }
+}
+
+.personContainer {
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  justify-content: space-between;
+
+  .avatarBlock {
+    display: flex;
+    align-items: center;
+    flex-basis: 24%;
+    flex-direction: column;
+    justify-content: center;
+
+    .avatar {
+      display: flex;
+      overflow: hidden;
+      align-items: center;
+      justify-content: center;
+
+      width: 120px;
+      height: 120px;
+
+      border-radius: 100%;
+
+      &.noAvatar {
+        background-color: #E5E5E5;
+      }
+
+      .noAvatarIcon {
+        width: 100px;
+        height: 100px;
+      }
+
+      img {
+        width: 120px;
+        height: 120px;
+
+        border-radius: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .changeProfileButton {
+      box-sizing: border-box;
+      width: 200px;
+      margin-top: 20px;
+      padding: 10px 0;
+
+      transition: 0.25s;
+      transition-property: background-color, color;
+
+      text-align: center;
+
+      color: #363557;
+      border: 1px solid #363557;
+      border-radius: 40px;
+      background: #FFF;
+
+      font-family: HelveticaNeueCyr, Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      font-style: normal;
+      line-height: 18px;
+
+      &:hover {
+        color: #FFF;
+        background-color: #363557;
+      }
+    }
+  }
+
+  .personBlock {
+    display: flex;
+    align-items: flex-start;
+    flex-basis: 76%;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-left: 30px;
+
+    .fio {
+      padding-bottom: 16px;
+
+      p {
+        margin: 0 !important;
+
+        color: #222;
+
+        font-size: 60px;
+        line-height: 59.28px;
+      }
+    }
+
+    .infoBlock {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 670px) {
+    flex-direction: column;
+
+    .personBlock {
+      .fio {
+        p {
+          font-size: 35px !important;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 570px) {
+    margin-left: 0;
+  }
+}
+
+.hLine {
+  position: relative;
+
+  width: 100%;
+  margin-bottom: 17px;
+
+  border: 1px solid #B0B0B0;
+}
+
+.hLineLite {
+  width: 100%;
+
+  color: #000;
+  border: 1px solid #E5E5E5;
+}
+
+p {
+  margin: 4px 0;
+}
+
+.userActivityBlockContainer {
+  margin-top: 80px;
+
+  .userActivityBlock {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .leftList {
+      display: flex;
+      flex-direction: column;
+
+      .item {
+        height: 60px;
+
+        p {
+          cursor: pointer;
+          text-align: left;
+          vertical-align: middle;
+
+          &:active {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}

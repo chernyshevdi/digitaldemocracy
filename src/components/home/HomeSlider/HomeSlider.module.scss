@@ -1,0 +1,157 @@
+@import '../../../_mixins.scss';
+
+.textBeforeCarousel {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 40px;
+}
+
+.carouselTitle {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.carouselTitle p {
+  font-size: 40px;
+}
+
+.imageFrame {
+  position: relative;
+
+  height: 208px;
+}
+
+.buttonStyle {
+  @include buttonStyle;
+}
+
+.buttonStyle:hover {
+  color: #363557;
+}
+
+.customText {
+  text-align: left;
+  white-space: nowrap;
+
+  color: #222;
+
+  font-size: 18px;
+}
+
+@media (max-width: 872px) {
+  .buttonStyle {
+    padding: 10px 30px;
+
+    font-size: 14px;
+  }
+
+  .allStyle {
+    padding: 2% 2%;
+
+    font-size: 4vw;
+  }
+
+  .textBeforeCarousel {
+    margin: 37px 34px 56px 33px;
+  }
+
+  .textBeforeCarousel p {
+    font-size: 4vw;
+  }
+
+  .slick-slide {
+    /* width: 100px !important; */
+  }
+
+  .carouselImage {
+    width: 210px;
+    height: 210px;
+  }
+
+  .carouselImage2 {
+    width: 210px;
+    height: 210px;
+  }
+
+  .customText {
+    /* margin-top: -39px; */
+    font-size: 12px;
+  }
+
+  .persentage {
+    font-size: 25px;
+  }
+
+  .imageFrame {
+    height: 161px;
+  }
+}
+
+@media (max-width: 361px) {
+  .buttonStyle {
+    padding: 2% 2%;
+
+    font-size: 4vw;
+  }
+
+  /* .slick-prev { */
+
+  /*  display: none !important; */
+
+  /* } */
+
+  /* .slick-next { */
+
+  /*  display: none !important; */
+
+  /* } */
+
+  /* .makeStyles-carouselContainer-2 { */
+
+  /*  margin-left: 10px !important; */
+
+  /* } */
+
+  /* .slick-list { */
+
+  /*  margin-left: -14px !important; */
+
+  /* } */
+}
+
+/* slick-arrow slick-prev */
+
+.slick-prev {
+  top: 50% !important;
+  left: -70px !important;
+}
+
+.slick-next {
+  top: 50% !important;
+  right: -31px !important;
+}
+
+.slick-prev::before {
+  display: flex;
+  align-items: center;
+
+  width: 20px;
+  height: 20px;
+
+  content: url('../../../icons/pictures/prev.png') !important;
+}
+
+.slick-next::before {
+  display: flex;
+  align-items: center;
+
+  width: 20px;
+  height: 20px;
+
+  content: url('../../../icons/pictures/next.png') !important;
+}

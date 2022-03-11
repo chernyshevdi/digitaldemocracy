@@ -1,0 +1,43 @@
+@import 'src/variables.scss';
+
+
+.dataGrid {
+  min-height: 350px;
+
+  @media screen and (max-width: $mobileScreen) {
+    width: 100%;
+  }
+}
+
+.link {
+  color: #1F00ED;
+  cursor: pointer;
+}
+
+.hideChartBtn {
+  color: #1F00ED;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.showMoreBtn {
+  margin-top: 20px;
+  color: #1F00ED;
+  font-size: 16px;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+}
+
+.searchInput {
+  display: block;
+  max-width: 250px;
+  margin: 0 0 10px auto;
+
+  input {
+    height: 45px;
+    padding: 0 0 0 20px;
+    line-height: 40px;
+  } 
+}

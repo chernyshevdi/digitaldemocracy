@@ -1,0 +1,113 @@
+@import 'src/variables.scss';
+
+.container {
+  display: flex;
+  overflow: scroll;
+  overflow-y: scroll;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  height: 100%;
+  max-height: 500px;
+  padding: 20px 50px;
+
+  border: 1px solid #B0B0B0;
+  border-radius: 5px;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    right: 20px !important;
+
+    width: 5px;
+
+    transform: translateX(-30%) !important;
+
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    position: relative;
+    right: 20px !important;
+
+    transform: translateX(-30%) !important;
+
+    border-radius: 30px;
+    background: transparent; /* color of the tracking area */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    position: relative;
+
+    width: 2px !important;
+
+    transform: translateX(-30%) !important;
+
+    border-radius: 20px;
+    background-color: #B0B0B0;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    transform: translateX(-30%) !important;
+  }
+
+  .informationBlock {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 30px;
+
+    border-bottom: 1px solid #B0B0B0;
+
+    font-size: 16px;
+
+    @media screen and (max-width: 1024px) {
+      padding: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0 !important;
+
+      border-bottom: none !important;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 0 10px;
+
+    .informationBlock {
+      flex-direction: column;
+
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+  height: max-content;
+
+  p {
+    min-width: 180px;
+    margin-right: 10px;
+  }
+
+  .linkContent {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  @media screen and (max-width: $mobileScreen) {
+    p {
+      min-width: 165px;
+    }
+  }
+}

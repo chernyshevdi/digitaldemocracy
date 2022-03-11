@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+
+  front:
+    restart: always
+    image: ddemo-front
+    container_name: front
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+    networks:
+      - ddemo
+
+  nginx-ingress:
+    restart: always
+    image: nginx:alpine
+    container_name: nginx
+    networks:
+      - ddemo
+    volumes:
+      - ./nginx/app.${ENV}.conf:/etc/nginx/nginx.conf
+      - /opt/letsencrypt:/var/www/_letsencrypt
+      - /etc/letsencrypt/:/ssl/
+    ports:
+      - 80:80
+      - 443:443
+
+networks:
+  ddemo:

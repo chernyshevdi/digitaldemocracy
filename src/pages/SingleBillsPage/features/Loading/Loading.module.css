@@ -1,0 +1,21 @@
+.loadingCont {
+  position: absolute;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #00000080;
+}
+
+.loadingWrapper {
+  position: absolute;
+  z-index: 100;
+
+  width: 100%;
+  height: 100%;
+}

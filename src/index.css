@@ -1,0 +1,31 @@
+.MuiButton-root {
+  font-weight: 400;
+}
+
+.MuiButton-containedPrimary {
+  color: #FFF;
+  background-color: #363557;
+}
+
+.MuiButton-containedPrimary:disabled {
+  color: white;
+  background-color: #B0B0B0;
+}
+
+.MuiSwitch-colorPrimary {
+  color: #248232 !important;
+}
+
+.MuiSwitch-track {
+  background-color: #9F9F9F !important;
+}
+
+.MuiButton-outlinedPrimary {
+  color: #747373;
+  border-color: #747373;
+}
+
+.MuiButton-outlinedPrimary:hover {
+  color: #363557;
+  border-color: #363557;
+}

@@ -1,0 +1,58 @@
+@mixin fontsCookie {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  position: sticky;
+  z-index: 999999;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  padding: 1.2vh 0 2vh;
+
+  background-color: #FFF;
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
+
+  .message {
+    width: 80%;
+
+    margin: 0 auto;
+
+    &__title {
+      margin: 0;
+
+      @include fontsCookie;
+    }
+
+    &__discription {
+      margin-bottom: 15px;
+
+      @include fontsCookie;
+    }
+  }
+}
+
+.buttonStyle {
+  display: flex;
+
+  box-sizing: border-box;
+  height: 40px;
+  margin: 0 auto;
+  padding: 10px 30px;
+
+  white-space: nowrap;
+
+  color: white;
+  border: 1px solid #363557;
+  border-radius: 150px;
+  background-color: #363557;
+
+  font-size: 14px;
+
+  &:hover {
+    color: #363557;
+  }
+}
